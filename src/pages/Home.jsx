@@ -1,4 +1,11 @@
+import PostsList from "../components/posts/PostsList";
+import PostContext from "../contexts/PostContext";
+import { useContext } from "react";
+
 export default function Home() {
+
+    const { posts } = useContext(PostContext)
+
     return (
         <>
 
@@ -27,7 +34,10 @@ export default function Home() {
                 </section>
 
                 <section>
-
+                    <div className="container">
+                        <h3>Best sellers</h3>
+                        <PostsList posts={posts.slice(0, 3)} />
+                    </div>
                 </section>
             </main>
         </>
