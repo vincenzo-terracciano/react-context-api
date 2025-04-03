@@ -10,7 +10,7 @@ export default function PostsPage() {
         <section className="my-5">
             <div className="container">
 
-                <h1>My posts</h1>
+                <h1 className="mb-3">My posts</h1>
                 <PostsList posts={posts} />
 
             </div>
